@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="scripts/rotate.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="room" src="assets/room.jpg" />
+        <a-asset-item id="chickenModel" src="assets/chicken.glb"></a-asset-item>
+      </a-assets>
+      
+      <a-sky id="skybox" src="#room"></a-sky>
+      <a-entity id="luz-ambiente" light="color: #ffffff; type: ambient; intensity: 3.75;"></a-entity>
+      <a-entity
+        id="galinha"
+        scale="0.284 0.284 0.284"
+        position="-0.25 0 -2.942"
+        rotation="0 23.15 0"
+        gltf-model="#chickenModel"
+        rotate-on-mouseleave
+        animation=""
+      ></a-entity>
+      
+      <a-camera position="0 0 0">
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
